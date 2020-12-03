@@ -1,0 +1,56 @@
+{
+    "movieList":[
+        {
+            "imgUrl": "http://localhost:8080/data/1.png",
+            "title":"一秒钟一秒钟一秒钟一秒钟一秒钟一秒钟一秒钟一秒钟一秒钟一秒钟一秒钟一秒钟一秒钟一秒钟一秒钟一秒钟一秒钟一秒钟一秒钟一秒钟一秒钟一秒钟一秒钟",
+            "score":"10",
+            "like":"100",
+            "year":"2000",
+            "area":"中国",
+            "type":"剧情",
+            "director":["张艺谋"],
+            "author":["张译","刘浩存", "范伟"]
+        },
+        {
+            "imgUrl": "http://localhost:8080/data/1.png",
+            "title":"一秒钟",
+            "score":"8",
+            "like":"100",
+            "year":"2020",
+            "area":"中国",
+            "type":"剧情",
+            "director":["张艺谋"],
+            "author":["张译","刘浩存", "范伟"]
+        },{
+            "imgUrl": "http://localhost:8080/data/1.png",
+            "title":"一秒钟",
+            "score":"9.1",
+            "like":"330",
+            "year":"2017",
+            "area":"中国",
+            "type":"剧情",
+            "director":["张艺谋"],
+            "author":["张译","刘浩存", "范伟"]
+        },{
+            "imgUrl": "http://localhost:8080/data/1.png",
+            "title":"一秒钟",
+            "score":"9.7",
+            "like":"210",
+            "year":"2012",
+            "area":"中国",
+            "type":"剧情",
+            "director":["张艺谋"],
+            "author":["张译","刘浩存", "范伟"]
+        },{
+            "imgUrl": "http://localhost:8080/data/1.png",
+            "title":"一秒钟",
+            "score":"9.9",
+            "like":"120",
+            "year":"2019",
+            "area":"中国",
+            "type":"剧情",
+            "director":["张艺谋"],
+            "author":["张译","刘浩存", "范伟"]
+        }
+    ]
+}
