@@ -1,8 +1,10 @@
 <template>
     <div class="list">
         <HeadTop head-title="电影列表" go-back="true" ></HeadTop>
-        <MovieSort :sortMsg = "sortMsg"></MovieSort>
-        <MovieBrief :movieList = "movieList"></MovieBrief>
+        <BackTop></BackTop>
+        <MovieSort :sortMsg = "sortMsg" @click-item="selectType"></MovieSort>
+        <MovieBrief :movieList = "movieList" :key="selectType"></MovieBrief>
+        
     </div>
 </template>
 
@@ -10,7 +12,9 @@
     import HeadTop from '@/components/header/Head'
     import MovieSort from './pages/MovieSort'
     import MovieBrief from './pages/MovieBrief'
-    import {mapState} from 'vuex'
+    import BackTop from './pages/BackTop'
+    
+    // import {mapState} from 'vuex'
     export default {
         name: "List",
         data(){
@@ -39,39 +43,48 @@
                     yearSort:['全部年份', '2020-2010', '2009-2000', '1999-1990', '1989-1980','其它'],
                     methodSort:['全部方式', '可跳转', '下载链接', '仅推荐']
                 },
-                movieList:[]
+                movieList:[],
+                
             }
         },
         components:{
             HeadTop,
             MovieSort,
-            MovieBrief
+            MovieBrief,
+            BackTop
         },
         methods:{
+            selectType(data){
+                console.log(data)
+                this.axiosSort(data)
+                
+            },
             Sort(sortClass){
                 this.movieList.sort((a, b) => {                    
                     return b[sortClass]-a[sortClass]
                 })
                 // console.log(this.movieList)
-            } 
-        },
-        mounted(){
-            this.axios.get("http://localhost:8080/data/movie.json")
+            },
+            axiosSort(text){
+                this.axios.get("http://localhost:8080/data/movie.json")
                 .then((res) => {
                     this.movieList = res.data.movieList
-                    // this.Sort(this.$store.state.sortType)
-                    this.Sort(this.$store.state.sortType)
-                    // console.log(this.movieList)
+                    this.Sort(text)
                 })
+            }
         },
-        computed: {
-            ...mapState(['sortType'])
-        }
+        mounted(){
+            this.axiosSort("year")
+        },
+        // computed: {
+        //     ...mapState(['sortType'])
+        // }
     }
 </script>
 
 <style>
-    .list{
+    .list{        
         background: #fff;
+        position: relative;
     }
 </style>

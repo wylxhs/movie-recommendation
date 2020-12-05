@@ -8,6 +8,7 @@
     import HeadTop from '@/components/header/Head'
     export default {
         name: "bindMobile",
+        
         components:{
             HeadTop
         }
