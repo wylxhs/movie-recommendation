@@ -1,6 +1,6 @@
 <template>
     <div class="backtop"  @click="backTop">
-        <img src="http://localhost:8080/data/backtop.png" alt="">
+        <img src="http://localhost:8080/data/backtop.png">
     </div>
 </template>
 
@@ -32,7 +32,7 @@
     }
 </script>
 
-<style>
+<style lang="scss" scoped>
     .backtop{
         width: 1rem;
         height: 1rem;

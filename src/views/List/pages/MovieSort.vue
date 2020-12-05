@@ -37,8 +37,7 @@
             emitList(sortI){
                 this.$emit('click-item', sortI)
             }
-        }
-        
+        }        
     }
 </script>
 
